@@ -139,7 +139,10 @@ section{position:relative;scroll-margin-top:80px}
 .urgency .u-b{display:none}
 .urgency .dot{width:6px;height:6px;border-radius:50%;background:#2b1200;animation:pulse 1.7s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.75)}}
-.clock{font-variant-numeric:tabular-nums;font-weight:900;letter-spacing:.07em;background:rgba(43,18,0,.17);padding:2px 8px;border-radius:6px}
+.clock{font-variant-numeric:tabular-nums;font-weight:900;letter-spacing:.07em;background:rgba(43,18,0,.17);padding:2px 8px;border-radius:6px;min-width:3.6em;text-align:center}
+.urgency.expired{background:linear-gradient(90deg,#7b8796,#5c6874 50%,#4a5560);color:#fff}
+.urgency.expired .u-a,.urgency.expired .u-b{display:none}
+.urgency.expired .in::after{content:"Launch offer closed — price back to $29";font-weight:800;letter-spacing:.03em}
 
 /* ================= HEADER ================= */
 .hdr{
@@ -560,6 +563,7 @@ h2{font-size:clamp(25px,3.5vw,40px);line-height:1.12;font-weight:900;letter-spac
 .guarantee p{font-size:11px;color:#bcd8d2;line-height:1.5}
 .guarantee p b{color:#fff}
 .offer-note{text-align:center;font-size:11.5px;color:var(--muted-2);margin-top:16px}
+.offer-note b{color:#ffd166;font-variant-numeric:tabular-nums;font-weight:800;letter-spacing:.04em}
 .offer-note .i{width:12px;height:12px;display:inline-block;vertical-align:-2px;color:var(--gold)}
 
 /* ================= SOCIAL PROOF ================= */
@@ -784,10 +788,10 @@ footer{background:#040810;border-top:1px solid rgba(255,255,255,.07);padding-top
 <div class="urgency">
   <div class="in">
     <span class="dot" aria-hidden="true"></span>
-    <span class="u-a"><b>2026 El Niño season:</b> the $9.90 launch price ends in</span>
-    <span class="u-b"><b>$9.90 launch price</b> ends in</span>
+    <span class="u-a"><b>Launch price ($9.90)</b> reserved for you for</span>
+    <span class="u-b"><b>$9.90 launch price</b> reserved for</span>
     <span class="clock" id="clock">00:00:00</span>
-    <span class="u-a">· then back to $29</span>
+    <span class="u-a">· after that it goes back to $29</span>
   </div>
 </div>
 
@@ -807,7 +811,7 @@ footer{background:#040810;border-top:1px solid rgba(255,255,255,.07);padding-top
     </nav>
     <div class="hdr-right">
       <div class="hdr-price">Instant download<b>$9.90</b></div>
-      <a class="btn btn-gold btn-sm js-cta" href="#offer" data-cta="header">Get the Manual</a>
+      <a target="_blank" rel="noopener" class="btn btn-gold btn-sm js-cta" href="https://pay.kiwify.com/8FP6AKO" data-cta="header">Get the Manual</a>
     </div>
   </div>
 </header>
@@ -909,7 +913,7 @@ footer{background:#040810;border-top:1px solid rgba(255,255,255,.07);padding-top
       </p>
 
       <div class="hero-cta">
-        <a class="btn btn-gold js-cta" href="#offer" data-cta="hero">
+        <a target="_blank" rel="noopener" class="btn btn-gold js-cta" href="https://pay.kiwify.com/8FP6AKO" data-cta="hero">
           Get Instant Access — $9.90
           <svg class="i i-sm"><use href="#i-arrow"/></svg>
         </a>
@@ -1257,7 +1261,7 @@ footer{background:#040810;border-top:1px solid rgba(255,255,255,.07);padding-top
           </div>
           <div class="terms">one-time payment · no subscription</div>
           <span class="save">Save $19.10 today</span>
-          <a class="btn btn-gold js-cta" href="#offer" data-cta="offer">Yes — Send Me the Manual <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
+          <a target="_blank" rel="noopener" class="btn btn-gold js-cta" href="https://pay.kiwify.com/8FP6AKO" data-cta="offer">Yes — Send Me the Manual <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
           <div class="pays" aria-label="Payment methods"><span class="pay">Visa</span><span class="pay">Mastercard</span><span class="pay">Amex</span><span class="pay">PayPal</span><span class="pay">Apple Pay</span></div>
           <div class="pay-note"><svg class="i"><use href="#i-lock"/></svg> Secure 256-bit checkout</div>
         </div>
@@ -1269,7 +1273,7 @@ footer{background:#040810;border-top:1px solid rgba(255,255,255,.07);padding-top
       </div>
     </div>
 
-    <p class="offer-note rv"><svg class="i"><use href="#i-clock"/></svg> Launch price ends at midnight — then back to $29.</p>
+    <p class="offer-note rv"><svg class="i"><use href="#i-clock"/></svg> Your $9.90 launch price is held for <b id="clock2">15:00</b> — after that, back to $29.</p>
   </div>
 </section>
 
@@ -1381,7 +1385,7 @@ footer{background:#040810;border-top:1px solid rgba(255,255,255,.07);padding-top
     <span class="eyebrow rv">Last call</span>
     <h2 class="rv">The best time to prepare was last month.<br>The second-best is <span class="grad">tonight.</span></h2>
     <p class="rv d1">Print the first checklist in the next five minutes and start.</p>
-    <a class="btn btn-gold js-cta rv d2" href="#offer" data-cta="final">Get Instant Access — $9.90 <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
+    <a target="_blank" rel="noopener" class="btn btn-gold js-cta rv d2" href="https://pay.kiwify.com/8FP6AKO" data-cta="final">Get Instant Access — $9.90 <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
     <div class="hero-trust rv d2">
       <span><svg class="i"><use href="#i-lock"/></svg> Secure checkout</span><span class="sep">·</span>
       <span><svg class="i"><use href="#i-download"/></svg> Instant download</span><span class="sep">·</span>
@@ -1412,7 +1416,7 @@ footer{background:#040810;border-top:1px solid rgba(255,255,255,.07);padding-top
       </div>
       <div class="f-col">
         <h4>Support</h4>
-        <a href="/cdn-cgi/l/email-protection#c4b7b1b4b4abb6b084a1a8aaadaaabb6a1a5a0bdeaa7aba9"><span class="__cf_email__" data-cfemail="463533363629343206232a282f2829342327223f6825292b">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#c7b4b2b7b7a8b5b387a2aba9aea9a8b5a2a6a3bee9a4a8aa"><span class="__cf_email__" data-cfemail="93e0e6e3e3fce1e7d3f6fffdfafdfce1f6f2f7eabdf0fcfe">[email&#160;protected]</span></a>
         <a href="legal.html#refund">Refund policy</a>
         <a href="legal.html#terms">Terms of service</a>
         <a href="legal.html#privacy">Privacy policy</a>
@@ -1452,7 +1456,7 @@ footer{background:#040810;border-top:1px solid rgba(255,255,255,.07);padding-top
       <b>$9.90</b>
       <small>one-time</small>
     </div>
-    <a class="btn btn-gold js-cta" href="#offer" data-cta="sticky">Get Instant Access</a>
+    <a target="_blank" rel="noopener" class="btn btn-gold js-cta" href="https://pay.kiwify.com/8FP6AKO" data-cta="sticky">Get Instant Access</a>
   </div>
 </div>
 
@@ -1461,7 +1465,7 @@ footer{background:#040810;border-top:1px solid rgba(255,255,255,.07);padding-top
    CONFIG — paste your checkout URL between the quotes.
    All CTA buttons will use it. Empty = scroll to the offer.
    ============================================================ */
-const CHECKOUT_URL = "";
+const CHECKOUT_URL = "https://pay.kiwify.com/8FP6AKO";
 
 (function(){
   var ctas = document.querySelectorAll('.js-cta');
@@ -1473,17 +1477,57 @@ const CHECKOUT_URL = "";
     }
   }
 
-  /* countdown to local midnight */
-  var clock = document.getElementById('clock');
+  /* 15-minute launch-offer timer.
+     Persists across reloads (localStorage + cookie fallback),
+     survives tab backgrounding, and never resets for the visitor. */
+  var OFFER_MINUTES = 15;
+  var KEY = 'enr_offer_deadline';
+  var clock  = document.getElementById('clock');
+  var clock2 = document.getElementById('clock2');
+
+  function readDeadline(){
+    try {
+      var v = window.localStorage.getItem(KEY);
+      if (v) return parseInt(v, 10);
+    } catch(e){}
+    var m = document.cookie.match(/(?:^|; )enr_offer_deadline=([^;]*)/);
+    return m ? parseInt(m[1], 10) : null;
+  }
+  function writeDeadline(ts){
+    try { window.localStorage.setItem(KEY, String(ts)); } catch(e){}
+    var d = new Date(ts + 7*86400000).toUTCString();
+    document.cookie = KEY + '=' + ts + '; expires=' + d + '; path=/; SameSite=Lax';
+  }
+
+  var deadline = readDeadline();
+  if (!deadline || isNaN(deadline) || deadline <= Date.now()) {
+    deadline = Date.now() + OFFER_MINUTES * 60000;
+    writeDeadline(deadline);
+  }
+
   function pad(n){ return String(n).padStart(2,'0'); }
   function tick(){
-    if(!clock) return;
-    var now = new Date();
-    var end = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
-    var s = Math.max(0, Math.floor((end - now)/1000));
-    clock.textContent = pad(Math.floor(s/3600)) + ':' + pad(Math.floor(s%3600/60)) + ':' + pad(s%60);
+    var s = Math.max(0, Math.round((deadline - Date.now()) / 1000));
+    var txt = pad(Math.floor(s/60)) + ':' + pad(s%60);
+    if (clock)  clock.textContent  = txt;
+    if (clock2) clock2.textContent = txt;
   }
-  tick(); setInterval(tick, 1000);
+  tick();
+  /* interval + re-sync when the tab comes back to the foreground */
+  setInterval(tick, 1000);
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) tick(); });
+
+  /* optional: dim the timer + soften the badge when it reaches zero (no fake reset) */
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var t = setInterval(function(){
+      if (Date.now() >= deadline) {
+        clearInterval(t);
+        var u = document.querySelector('.urgency');
+        if (u) u.classList.add('expired');
+      }
+    }, 1000);
+  })();
 
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
@@ -1523,5 +1567,6 @@ const CHECKOUT_URL = "";
   }
 })();
 </script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a55316bd1a325f0e',t:'MTc5Mzc4OTc1MQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a55316bd1a325f0e',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>  <script defer src="https://presellfuga.lovable.app/tracker.js?site=153dd12d-a37a-439a-91c7-986dd043e703"></script>
 </body>
 </html>
